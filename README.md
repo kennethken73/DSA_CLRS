@@ -1,49 +1,57 @@
 
 # Table of Contents
 
-1.  [Project - Overview: DSA<sub>CLRS</sub>](#org76886d2)
-    1.  [Following CLRS book and sharing the experience on discord](#org8f1685e)
-    2.  [The Various Data Structures and Algorithms will be together on this one project](#org863f4fd)
-    3.  [Project - Specifics](#org2b987da)
-        1.  [tree](#orgd77daa7)
-        2.  [how to build, compile, and run](#org6643bf1)
-2.  [Git Repo: DSA<sub>CLRS</sub>](#org153fa4d)
-3.  [C++ Project - Main Features](#org1f9320d)
-    1.  [Emacs Development Environment](#org50e1c00)
-        1.  [Magit](#orgece3e1c)
-        2.  [dir-locals configuration](#orga56f968)
-        3.  [projectile configuration](#orge1e244b)
-        4.  [non-conflicting with other emacs packages](#org04e93c0)
-    2.  [CMake Build Management](#org16ab61c)
+1.  [Project - Overview: DSA<sub>CLRS</sub>](#org724529f)
+    1.  [Following CLRS book and sharing the experience on discord](#org455086c)
+    2.  [The Various Data Structures and Algorithms will be together on this one project](#orgad1c485)
+    3.  [Project - Specifics](#org571f0e8)
+        1.  [tree](#org6b230de)
+        2.  [how to build, compile, and run](#orge2120e5)
+2.  [Git Repo: DSA<sub>CLRS</sub>](#org77775b3)
+3.  [C++ Project - Main Features](#org1f9ed88)
+    1.  [Emacs Development Environment](#org61e51bd)
+        1.  [Magit](#org370b24e)
+        2.  [dir-locals configuration](#org8dfac3b)
+        3.  [projectile configuration](#orgea45871)
+        4.  [non-conflicting with other emacs packages](#org9fde997)
+    2.  [CMake Build Management](#org82be619)
 
 
-<a id="org76886d2"></a>
+<a id="org724529f"></a>
 
 # Project - Overview: DSA<sub>CLRS</sub>
 
 
-<a id="org8f1685e"></a>
+<a id="org455086c"></a>
 
 ## Following CLRS book and sharing the experience on discord
 
 
-<a id="org863f4fd"></a>
+<a id="orgad1c485"></a>
 
 ## The Various Data Structures and Algorithms will be together on this one project
 
 
-<a id="org2b987da"></a>
+<a id="org571f0e8"></a>
 
 ## Project - Specifics
 
 
-<a id="orgd77daa7"></a>
+<a id="org6b230de"></a>
 
 ### tree
 
-    (shell-command-to-string "tree -I build")  ;; Don't show build directory
+    ;; https://www.baeldung.com/linux/insert-line-specific-line-number
+    ;; report of the directory structure, showing the build directory, but not it's contents
+    (shell-command "tree -a -o tree.txt -I 'build|.cache|.git|tree.txt'")
+    (shell-command "sed -i '2 i ├── build' tree.txt")
+    (shell-command-to-string "cat tree.txt") 
 
     .
+    ├── build
+    ├── .dir-locals.el
+    ├── .gitignore
+    ├── .projectile
     ├── README.md
     ├── README.org
     ├── src
@@ -51,10 +59,10 @@
     │   └── DSA_CLRS.cpp
     └── test
     
-    2 directories, 4 files
+    2 directories, 7 files
 
 
-<a id="org6643bf1"></a>
+<a id="orge2120e5"></a>
 
 ### how to build, compile, and run
 
@@ -71,44 +79,45 @@ This build system is integrated with spacemacs.
     I have (omen-c/cpp-project-run-interactive-executable) bound to <Spc> ocr
 
 
-<a id="org153fa4d"></a>
+<a id="org77775b3"></a>
 
 # Git Repo: DSA<sub>CLRS</sub>
 
 <https://github.com/kennethken73/DSA_CLRS>
+Remember to export to markdown from README.org
 
 
-<a id="org1f9320d"></a>
+<a id="org1f9ed88"></a>
 
 # C++ Project - Main Features
 
 
-<a id="org50e1c00"></a>
+<a id="org61e51bd"></a>
 
 ## Emacs Development Environment
 
 
-<a id="orgece3e1c"></a>
+<a id="org370b24e"></a>
 
 ### Magit
 
 
-<a id="orga56f968"></a>
+<a id="org8dfac3b"></a>
 
 ### dir-locals configuration
 
 
-<a id="orge1e244b"></a>
+<a id="orgea45871"></a>
 
 ### projectile configuration
 
 
-<a id="org04e93c0"></a>
+<a id="org9fde997"></a>
 
 ### non-conflicting with other emacs packages
 
 
-<a id="org16ab61c"></a>
+<a id="org82be619"></a>
 
 ## CMake Build Management
 

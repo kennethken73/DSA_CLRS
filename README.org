@@ -44,6 +44,7 @@ I have (omen-c/cpp-project-run-interactive-executable) bound to <Spc> ocr
 
 * Git Repo: DSA_CLRS
 https://github.com/kennethken73/DSA_CLRS
+Remember to export to markdown from README.org
 * C++ Project - Main Features
 ** Emacs Development Environment
 *** Magit
