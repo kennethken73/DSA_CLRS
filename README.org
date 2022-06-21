@@ -1,0 +1,10 @@
+* C++ Project - Main Features
+** Emacs Development Environment
+*** Magit
+*** dir-locals configuration
+*** projectile configuration
+*** non-conflicting with other emacs packages
+** CMake Build Management
+
+* Project - Name: DSA_CLRS
+* Git Repo: DSA_CLRS
