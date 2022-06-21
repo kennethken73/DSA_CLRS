@@ -4,19 +4,34 @@
 ** Project - Specifics
 *** tree
 #+begin_src elisp :exports both
-  (shell-command-to-string "tree -I build")  ;; Don't show build directory
+  ;; https://www.baeldung.com/linux/insert-line-specific-line-number
+  ;; report of the directory structure, showing the build directory, but not it's contents
+  (shell-command "tree -a -o tree.txt -I 'build|.cache|.git|tree.txt'")
+  (shell-command "sed -i '2 i ├── build' tree.txt")
+  (shell-command-to-string "cat tree.txt") 
 #+end_src
 
 #+RESULTS:
-: .
-: ├── README.md
-: ├── README.org
-: ├── src
-: │   ├── CMakeLists.txt
-: │   └── DSA_CLRS.cpp
-: └── test
-: 
-: 2 directories, 4 files
+#+begin_example
+.
+├── build
+├── .dir-locals.el
+├── .gitignore
+├── .projectile
+├── README.md
+├── .#README.org -> sov@omen.13683:1655776648
+├── README.org
+├── src
+│   ├── CMakeLists.txt
+│   └── DSA_CLRS.cpp
+└── test
+
+2 directories, 8 files
+#+end_example
+
+
+
+
 *** how to build, compile, and run
 This build system is integrated with spacemacs.
 **** build/compile:
