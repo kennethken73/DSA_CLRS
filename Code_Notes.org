@@ -1,0 +1,12 @@
+* Include directories for CMake
+https://www.learncpp.com/cpp-tutorial/header-files/
+http://www.mariobadr.com/creating-a-header-only-library-with-cmake.html
+https://cmake.org/cmake/help/latest/guide/tutorial/Adding%20a%20Library.html
+https://cmake.org/cmake/help/book/mastering-cmake/chapter/System%20Inspection.html
+https://stackoverflow.com/questions/33586904/how-to-include-headers-in-cmake
+* std::vector
+https://m.cplusplus.com/reference/vector/vector/
+https://www.geeksforgeeks.org/initialize-a-vector-in-cpp-different-ways/
+https://www.geeksforgeeks.org/vector-in-cpp-stl/
+https://stackoverflow.com/questions/1426093/set-vector-type-at-runtime
+https://www.educba.com/c-plus-plus-vector-initialization/

@@ -36,10 +36,10 @@
 This build system is integrated with spacemacs.
 **** build/compile:
 run (cmake-ide-compile) while in DSA_CLRS.cpp
-I have (cmake-ide-compile) bound to ,cc
+I have (cmake-ide-compile) bound to =,cc=
 **** run:
 run (omen-c/cpp-project-run-interactive-executable) while in DSA_CLRS.cpp
-I have (omen-c/cpp-project-run-interactive-executable) bound to <Spc> ocr
+I have (omen-c/cpp-project-run-interactive-executable) bound to =<Spc> ocr=
 
 
 * Git Repo: DSA_CLRS

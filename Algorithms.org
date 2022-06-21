@@ -1,0 +1,105 @@
+# Mirroring my latex/org/pdf setup @ ~/Documents/UNLV/370/LABS/Scheduler/writeUp.org
+# org-mode code blocks settings: https://orgmode.org/manual/Evaluating-Code-Blocks.html
+# code-block line numbering https://kitchingroup.cheme.cmu.edu/blog/2015/10/13/Line-numbers-in-org-mode-code-blocks/
+# code-block line numbering https://orgmode.org/manual/Literal-Examples.html
+# under-scores, carets, etc need to be escaped, to avoid pandoc compilation errors.
+# Remember to export this org to pdf (via ,ee pl), export often to quickly catch pandoc errors!
+
+#+TITLE: Algorithms in CLRS
+#+AUTHOR: Ken Harvey
+#+OPTIONS: num:t H:3 toc:t \n:t ^:nil
+#+LaTeX_CLASS: apa6
+#+LaTeX_CLASS_OPTIONS: [a4paper]
+#+LaTeX_HEADER: \usepackage{url}
+#+LaTeX_HEADER: \setcounter{secnumdepth}{4}
+#+LaTeX_HEADER: \setlength{\topmargin}{-2cm}
+#+LaTeX_HEADER: \affiliation{CS Student at UNLV \protect\\ github.com/kennethken73/DSA\_CLRS \protect\\ kennethken73@gmail.com}
+
+#+BEGIN_LaTeX 
+\begin{abstract}
+  \hrule
+    Ongoing Study of CLRS
+  \vspace{6pt}
+  \hrule
+    Literate Programming via orgmode's live-code snippets
+  \vspace{6pt}
+  \hrule
+  \vspace{14pt}
+\end{abstract}
+#+END_LaTeX
+
+* Insertion Sort
+CLRS pp.18 describes Insertion Sort, with the following pseudo-code:
+#+begin_src c :exports code
+  1   for j = 2 to A.length
+  2     key = A[j]
+  3     // Insert A[j] into the
+  4     // sorted sequence A[1..j-1],
+  5     i = j-1
+  6     while i > 0 and A[i] > key
+  7       A[i+1] = A[i]
+  8       i = i-1
+  9     A[i+1] = key
+#+end_src
+
+
+#+begin_comment
+NOTE: to quickly insert line-numbering in the above code-block:
+1. (evil-mode) visual-block edit the first column of characters, and block-replace with the number 0.
+2. run (evil-numbers/inc-at-pt-incremental) <Spc> onl on a block-selection (C-v) of the column of zeros just created.
+3. command-line randomization of a sequence of numbers: https://linuxhint.com/bash_shuf_command/ =seq 3 | shuf=
+
+
+#+end_comment
+
+NOTES ON THE PRECEDING PSEUDO-CODE :
+1. 
+    #+begin_src c :exports code
+      1   for j = 2 to A.length
+    #+end_src
+   + Initially, the first item in the array comprises the sorted set, which at this point
+     is only of length = 1, and therefore is sorted, by force.
+   + The other items (the last item, the second item, and all items in between) are considered unsorted.
+   + It is useful to state again, clearly, that this pseudo-code is 1-indexed (not 0-indexed).
+
+2. 
+    #+begin_src c :exports code
+      2     key = A[j]
+      3     // Insert A[j] into the
+      4     // sorted sequence A[1..j-1],
+    #+end_src
+
+   + On the first iteration, the second item is being placed into the sorted "hand"
+     (like a "hand" of a deck of cards).
+   + This item-being-sorted (namely: =j=) is
+     + initially: =2=, and
+     + finally: =A.length=
+     + So, if (in this 1-indexed array) the array has 5 elements, then
+       the last element is at position 5.
+       + Note, that in 0-indexed arrays, this last element will be at =A.length - 1=!
+
+     + The sorted "Left-hand" set is comprised of elements A[1..j-1], which is:
+
+       + initially: A[1..(2-1)] = A[1..1] = A[1], and
+
+       + finally: A[1..(A.length-1)]
+
+         + Note, that the final state of the algorithm takes the last item (namely: A[j]),
+           and places it into the "left-hand" sorted-set, comprised now of elements A[1] through A[j-1].
+
+3. 
+    #+begin_src c :exports code
+      5     i = j-1
+      6     while i > 0 and A[i] > key
+      7       A[i+1] = A[i]
+      8       i = i-1
+      9     A[i+1] = key
+    #+end_src
+   + We set the index into the sorted "left-hand" sorted-set at the right-most element, and
+     then iterate backwards.
+   + On each backwards iteration (i--), elements greater than the key-value (A[j]) are moved rightward
+     in the sorted-set (This is what line 7 accomplishes).
+   + Line 9 then places the key item-being-placed-into-its-correct-position at this correct position
+     (namely: A[i+1]).
+   + Note that line 5 guarantees that there /is/ some such i+1, as i is, at maximum (j-1) = (A.length - 1).
+     
