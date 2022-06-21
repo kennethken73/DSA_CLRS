@@ -3,7 +3,7 @@
 ** The Various Data Structures and Algorithms will be together on this one project
 ** Project - Specifics
 *** tree
-#+begin_src elisp
+#+begin_src elisp :exports both
   (shell-command-to-string "tree") 
 #+end_src
 
@@ -23,13 +23,8 @@ This build system is integrated with spacemacs.
 run (cmake-ide-compile) while in DSA_CLRS.cpp
 I have (cmake-ide-compile) bound to ,cc
 **** run:
-***** run non-interactively (if no input is needed)
-run (omen-c/cpp-project-run-executable) while in DSA_CLRS.cpp
-I have (omen-c/cpp-project-run-executable) bound to <Spc> ocr
-****** TODO I might remove this function in favor of the following function
-***** run interactively (if input is needed)
 run (omen-c/cpp-project-run-interactive-executable) while in DSA_CLRS.cpp
-I have (omen-c/cpp-project-run-interactive-executable) bound to <Spc> ocm
+I have (omen-c/cpp-project-run-interactive-executable) bound to <Spc> ocr
 
 
 * Git Repo: DSA_CLRS

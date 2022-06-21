@@ -24,7 +24,7 @@
                           (compile (concat (projectile-project-root) "build/DSA_CLRS") t)
                           (select-window (get-buffer-window "*compilation*")))
 
-                        (spacemacs/set-leader-keys "ocm" 'omen-c/cpp-project-run-interactive-executable)
+                        (spacemacs/set-leader-keys "ocr" 'omen-c/cpp-project-run-interactive-executable)
 
                         )
                     )
