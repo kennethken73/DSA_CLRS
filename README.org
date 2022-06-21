@@ -4,19 +4,19 @@
 ** Project - Specifics
 *** tree
 #+begin_src elisp :exports both
-  (shell-command-to-string "tree") 
+  (shell-command-to-string "tree -I build")  ;; Don't show build directory
 #+end_src
 
 #+RESULTS:
 : .
-: ├── build
+: ├── README.md
 : ├── README.org
 : ├── src
 : │   ├── CMakeLists.txt
 : │   └── DSA_CLRS.cpp
 : └── test
 : 
-: 3 directories, 3 files
+: 2 directories, 4 files
 *** how to build, compile, and run
 This build system is integrated with spacemacs.
 **** build/compile:
