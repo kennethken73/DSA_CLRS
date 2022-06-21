@@ -1,3 +1,39 @@
+* Project - Overview: DSA_CLRS
+** Following CLRS book and sharing the experience on discord
+** The Various Data Structures and Algorithms will be together on this one project
+** Project - Specifics
+*** tree
+#+begin_src elisp
+  (shell-command-to-string "tree") 
+#+end_src
+
+#+RESULTS:
+: .
+: ├── build
+: ├── README.org
+: ├── src
+: │   ├── CMakeLists.txt
+: │   └── DSA_CLRS.cpp
+: └── test
+: 
+: 3 directories, 3 files
+*** how to build, compile, and run
+This build system is integrated with spacemacs.
+**** build/compile:
+run (cmake-ide-compile) while in DSA_CLRS.cpp
+I have (cmake-ide-compile) bound to ,cc
+**** run:
+***** run non-interactively (if no input is needed)
+run (omen-c/cpp-project-run-executable) while in DSA_CLRS.cpp
+I have (omen-c/cpp-project-run-executable) bound to <Spc> ocr
+****** TODO I might remove this function in favor of the following function
+***** run interactively (if input is needed)
+run (omen-c/cpp-project-run-interactive-executable) while in DSA_CLRS.cpp
+I have (omen-c/cpp-project-run-interactive-executable) bound to <Spc> ocm
+
+
+* Git Repo: DSA_CLRS
+https://github.com/kennethken73/DSA_CLRS
 * C++ Project - Main Features
 ** Emacs Development Environment
 *** Magit
@@ -5,6 +41,3 @@
 *** projectile configuration
 *** non-conflicting with other emacs packages
 ** CMake Build Management
-
-* Project - Name: DSA_CLRS
-* Git Repo: DSA_CLRS
