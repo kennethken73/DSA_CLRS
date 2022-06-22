@@ -1,12 +1,64 @@
-* Include directories for CMake
+* CMake
+** TODO :eventually combine CMake with Ninja
+https://ninja-build.org/manual.html
+
+** Include directories for CMake
 https://www.learncpp.com/cpp-tutorial/header-files/
 http://www.mariobadr.com/creating-a-header-only-library-with-cmake.html
 https://cmake.org/cmake/help/latest/guide/tutorial/Adding%20a%20Library.html
 https://cmake.org/cmake/help/book/mastering-cmake/chapter/System%20Inspection.html
 https://stackoverflow.com/questions/33586904/how-to-include-headers-in-cmake
+https://www.siliceum.com/en/blog/post/cmake_01_cmake-basics
+
+*** One way it can be done
+This way follows the "pitchfork" method, which I somewhat like, but don't exactly follow.
+Good example of CMakeLists
+Instead of following a complete CMake(Lists.txt) solution, I am adding to my CMakeLists as I learn.
+https://github.com/Lectem/cpp-boilerplate
+https://github.com/vector-of-bool/pitchfork
+(I prefer "sources HAVE includes (interior: /project-root/src/include/); 
+  sources can LOOK for libraries (exterior: /project-root/lib/)).
+
+** "make clean" in CMake
+cmake --build C:/foo/build/ --target clean
+https://stackoverflow.com/questions/9680420/looking-for-a-cmake-clean-command-to-clear-up-cmake-output
+
+** ".phony" targets in CMake
+Useful for running custom make target for generating doxygen documentation, for example.
+This, specifically when the target is .phony (not supposed to be a compilation target).
+https://musteresel.github.io/posts/2018/03/cmake-phony-like-target-for-docs.html
+
+* C++ Directory Structure conventions/suggestions
+Note: There are no hard/fast rules, but knowing the prevalent forms would seem prudent.
+https://api.csswg.org/bikeshed/?force=1&url=https://raw.githubusercontent.com/vector-of-bool/pitchfork/develop/data/spec.bs#tld.include
+https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p1204r0.html
+https://www.selectiveintellect.net/blog/2016/7/29/using-cmake-to-add-third-party-libraries-to-your-project-1
+I like the "src/include/<name-reflecting-functionality>/" scheme
+This supports an idea that the /includes for /src are meant only for /scr..
+..other projects might want to have headers available for multiple /src's
+(in which the typical "/src" should be renamed to the project, ie: /myproject/myproject instead of /myproject/src,
+ for example: to allow for /calculator/i-o && /calculator/logic, to be available for the main /calculator/small_calculator and /calculator/graphing_calculator apps to consume.)
+But, I'd prefer /lib to store this.. as in /lib/io and /lib/logic to be consumed by /src
+
+** Avoid cyclic dependencies
+obviously, use inclusion guards..
+https://gamedev.net/tutorials/_/technical/general-programming/organizing-code-files-in-c-and-c-r1798/
+
+ 
 * std::vector
 https://m.cplusplus.com/reference/vector/vector/
 https://www.geeksforgeeks.org/initialize-a-vector-in-cpp-different-ways/
 https://www.geeksforgeeks.org/vector-in-cpp-stl/
 https://stackoverflow.com/questions/1426093/set-vector-type-at-runtime
 https://www.educba.com/c-plus-plus-vector-initialization/
+
+* github README professional format examples
+https://github.com/matiassingers/awesome-readme
+https://yushi95.medium.com/how-to-create-a-beautiful-readme-for-your-github-profile-36957caa711c
+
+* Threading
+https://github.com/oneapi-src/oneTBB
+
+* Examples of C++ projects
+https://www.codewithc.com/c-projects-with-source-code/
+

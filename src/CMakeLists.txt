@@ -54,12 +54,27 @@ cmake_print_variables(CMAKE_CXX_EXTENSIONS)
 cmake_print_variables(CMAKE_CXX_FLAGS)
 cmake_print_variables(CMAKE_CXX_STANDARD)
 cmake_print_variables(CMAKE_CXX_STANDARD_REQUIRED)
+cmake_print_variables(PROJECT_BINARY_DIR)
+cmake_print_variables(PROJECT_SOURCE_DIR)
+
 ## TODO how to do this properly?
 # cmake_print_properties(TARGETS DSA_CLRS
 #   PROPERTIES BUILD_RPATH)
 
+# included headers/implementation
+add_subdirectory("${PROJECT_SOURCE_DIR}/include/myAlgo/")
+
 # executable
 add_executable(DSA_CLRS DSA_CLRS.cpp)
+
+# additional linking
+target_link_libraries(DSA_CLRS PUBLIC myAlgoLib)
+
+target_include_directories(DSA_CLRS PUBLIC
+  "${PROJECT_BINARY_DIR}"
+  "${PROJECT_SOURCE_DIR}/include/myAlgo")
+
+
 
 # TODO run.sh target (consider running test build for multiple executables)
 
