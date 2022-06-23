@@ -1,4 +1,4 @@
-* Project - Overview: DSA\_CLRS
+* Project - Overview: `DSA_CLRS`
 ** Following CLRS book and sharing the experience on discord
 ** The Various Data Structures and Algorithms will be together on this one project
 ** Project - Current Status
@@ -66,14 +66,14 @@ Ground-work laid for creation and usage of algorithms, chosen at run-time.
 *** how to build, compile, and run
 This build system is integrated with spacemacs.
 **** build/compile:
-run (cmake-ide-compile) while in DSA\_CLRS.cpp
+run (cmake-ide-compile) while in `DSA_CLRS`.cpp
 I have (cmake-ide-compile) bound to =,cc=
 **** run:
-run (omen-c/cpp-project-run-interactive-executable) while in DSA\_CLRS.cpp
+run (omen-c/cpp-project-run-interactive-executable) while in `DSA_CLRS`.cpp
 I have (omen-c/cpp-project-run-interactive-executable) bound to =<Spc> ocr=
 
 
-* Git Repo: DSA\_CLRS
+* Git Repo: `DSA_CLRS`
 https://github.com/kennethken73/DSA_CLRS
 Remember to export to markdown from README.org
 * C++ Project - Main Features

@@ -1,52 +1,52 @@
 
 # Table of Contents
 
-1.  [Project - Overview: DSA\\<sub>CLRS</sub>](#org96e025b)
-    1.  [Following CLRS book and sharing the experience on discord](#org9ccfefd)
-    2.  [The Various Data Structures and Algorithms will be together on this one project](#orgeaa9e14)
-    3.  [Project - Current Status](#orgcd03c8f)
-        1.  [Example Run:](#org2c96e5e)
-    4.  [Project - Specifics](#org4af467e)
-        1.  [tree](#orgf947ce2)
-        2.  [how to build, compile, and run](#org1f81574)
-2.  [Git Repo: DSA\\<sub>CLRS</sub>](#org5010f4d)
-3.  [C++ Project - Main Features](#orga0af667)
-    1.  [Emacs Development Environment](#org6e8c735)
-        1.  [Magit](#orgaf20da9)
-        2.  [lsp-mode](#orgd4548b9)
-        3.  [DAP-mode debugging](#org262ba79)
-        4.  [org-mode](#org44a6be5)
-        5.  [dir-locals configuration](#orge4bdb77)
-        6.  [projectile configuration](#org12f3b5d)
-        7.  [non-conflicting with installed emacs packages](#org8897a65)
-        8.  [TODO](#org0a6fbeb)
-    2.  [CMake Build Management](#org611fa67)
-        1.  [TODO](#orgca45ab2)
+1.  [Project - Overview: \`DSA<sub>CLRS</sub>\`](#org6190e3d)
+    1.  [Following CLRS book and sharing the experience on discord](#org43865a6)
+    2.  [The Various Data Structures and Algorithms will be together on this one project](#orgcfae176)
+    3.  [Project - Current Status](#org6738796)
+        1.  [Example Run:](#orgbc52757)
+    4.  [Project - Specifics](#org0658fa2)
+        1.  [tree](#orgb21fd49)
+        2.  [how to build, compile, and run](#org51b90a1)
+2.  [Git Repo: \`DSA<sub>CLRS</sub>\`](#orgf4f90c0)
+3.  [C++ Project - Main Features](#orgabde5a0)
+    1.  [Emacs Development Environment](#org1b9f59b)
+        1.  [Magit](#orgb05c083)
+        2.  [lsp-mode](#org32020bd)
+        3.  [DAP-mode debugging](#org5d570fb)
+        4.  [org-mode](#org1e0cada)
+        5.  [dir-locals configuration](#orgb8a7d4c)
+        6.  [projectile configuration](#org7f5484c)
+        7.  [non-conflicting with installed emacs packages](#orga6f2d98)
+        8.  [TODO](#orgb778048)
+    2.  [CMake Build Management](#org3a0ae19)
+        1.  [TODO](#org95ad5a9)
 
 
-<a id="org96e025b"></a>
+<a id="org6190e3d"></a>
 
-# Project - Overview: DSA\\<sub>CLRS</sub>
+# Project - Overview: \`DSA<sub>CLRS</sub>\`
 
 
-<a id="org9ccfefd"></a>
+<a id="org43865a6"></a>
 
 ## Following CLRS book and sharing the experience on discord
 
 
-<a id="orgeaa9e14"></a>
+<a id="orgcfae176"></a>
 
 ## The Various Data Structures and Algorithms will be together on this one project
 
 
-<a id="orgcd03c8f"></a>
+<a id="org6738796"></a>
 
 ## Project - Current Status
 
 Ground-work laid for creation and usage of algorithms, chosen at run-time.
 
 
-<a id="org2c96e5e"></a>
+<a id="orgbc52757"></a>
 
 ### Example Run:
 
@@ -59,12 +59,12 @@ Ground-work laid for creation and usage of algorithms, chosen at run-time.
     algo: myAdd, params: 4,20 --> 24
 
 
-<a id="org4af467e"></a>
+<a id="org0658fa2"></a>
 
 ## Project - Specifics
 
 
-<a id="orgf947ce2"></a>
+<a id="orgb21fd49"></a>
 
 ### tree
 
@@ -87,26 +87,25 @@ Ground-work laid for creation and usage of algorithms, chosen at run-time.
     10	│   └── readme.txt
     11	├── .projectile
     12	├── README.md
-    13	├── .#README.org -> sov@omen.3631:1655934850
-    14	├── README.org
-    15	├── src
-    16	│   ├── CMakeLists.txt
-    17	│   ├── DSA_CLRS.cpp
-    18	│   └── include
-    19	│       ├── myAlgo
-    20	│       │   ├── CMakeLists.txt
-    21	│       │   ├── myAdd.cpp
-    22	│       │   ├── myAlgorithms.cpp
-    23	│       │   ├── myAlgorithms.hpp
-    24	│       │   └── myMult.cpp
-    25	│       └── myDS
-    26	└── test
+    13	├── README.org
+    14	├── src
+    15	│   ├── CMakeLists.txt
+    16	│   ├── DSA_CLRS.cpp
+    17	│   └── include
+    18	│       ├── myAlgo
+    19	│       │   ├── CMakeLists.txt
+    20	│       │   ├── myAdd.cpp
+    21	│       │   ├── myAlgorithms.cpp
+    22	│       │   ├── myAlgorithms.hpp
+    23	│       │   └── myMult.cpp
+    24	│       └── myDS
+    25	└── test
     
-    27	7 directories, 17 files
-    28	Plus the build/ directory
+    26	7 directories, 16 files
+    27	Plus the build/ directory
 
 
-<a id="org1f81574"></a>
+<a id="org51b90a1"></a>
 
 ### how to build, compile, and run
 
@@ -114,49 +113,49 @@ This build system is integrated with spacemacs.
 
 1.  build/compile:
 
-    run (cmake-ide-compile) while in DSA\\<sub>CLRS.cpp</sub>
+    run (cmake-ide-compile) while in \`DSA<sub>CLRS</sub>\`.cpp
     I have (cmake-ide-compile) bound to `,cc`
 
 2.  run:
 
-    run (omen-c/cpp-project-run-interactive-executable) while in DSA\\<sub>CLRS.cpp</sub>
+    run (omen-c/cpp-project-run-interactive-executable) while in \`DSA<sub>CLRS</sub>\`.cpp
     I have (omen-c/cpp-project-run-interactive-executable) bound to `<Spc> ocr`
 
 
-<a id="org5010f4d"></a>
+<a id="orgf4f90c0"></a>
 
-# Git Repo: DSA\\<sub>CLRS</sub>
+# Git Repo: \`DSA<sub>CLRS</sub>\`
 
 <https://github.com/kennethken73/DSA_CLRS>
 Remember to export to markdown from README.org
 
 
-<a id="orga0af667"></a>
+<a id="orgabde5a0"></a>
 
 # C++ Project - Main Features
 
 
-<a id="org6e8c735"></a>
+<a id="org1b9f59b"></a>
 
 ## Emacs Development Environment
 
 
-<a id="orgaf20da9"></a>
+<a id="orgb05c083"></a>
 
 ### Magit
 
 
-<a id="orgd4548b9"></a>
+<a id="org32020bd"></a>
 
 ### lsp-mode
 
 
-<a id="org262ba79"></a>
+<a id="org5d570fb"></a>
 
 ### DAP-mode debugging
 
 
-<a id="org44a6be5"></a>
+<a id="org1e0cada"></a>
 
 ### org-mode
 
@@ -165,22 +164,22 @@ Remember to export to markdown from README.org
 2.  org-export with pandoc and markdown integration
 
 
-<a id="orge4bdb77"></a>
+<a id="orgb8a7d4c"></a>
 
 ### dir-locals configuration
 
 
-<a id="org12f3b5d"></a>
+<a id="org7f5484c"></a>
 
 ### projectile configuration
 
 
-<a id="org8897a65"></a>
+<a id="orga6f2d98"></a>
 
 ### non-conflicting with installed emacs packages
 
 
-<a id="org0a6fbeb"></a>
+<a id="orgb778048"></a>
 
 ### TODO
 
@@ -188,12 +187,12 @@ Remember to export to markdown from README.org
 -   get clang-format set up
 
 
-<a id="org611fa67"></a>
+<a id="org3a0ae19"></a>
 
 ## CMake Build Management
 
 
-<a id="orgca45ab2"></a>
+<a id="org95ad5a9"></a>
 
 ### TODO
 
