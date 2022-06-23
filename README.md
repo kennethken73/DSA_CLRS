@@ -1,52 +1,54 @@
 
 # Table of Contents
 
-1.  [Project - Overview: DSA-CLRS](#org3fb4f6e)
-    1.  [Following CLRS book and sharing the experience on discord](#orga32565e)
-    2.  [The Various Data Structures and Algorithms will be together on this one project](#org998c072)
-    3.  [Project - Current Status](#orgff57413)
-        1.  [Example Run:](#org80affa4)
-    4.  [Project - Specifics](#orgd4dad8b)
-        1.  [tree](#org4304279)
-        2.  [how to build, compile, and run](#org9711727)
-2.  [Git Repo: DSA-CLRS](#org93a06f6)
-3.  [C++ Project - Main Features](#org9c0d4f5)
-    1.  [Emacs Development Environment](#org0f45898)
-        1.  [Magit](#org07471ae)
-        2.  [lsp-mode](#org29b2cb6)
-        3.  [DAP-mode debugging](#org11f2de9)
-        4.  [org-mode](#org53e903f)
-        5.  [dir-locals configuration](#org4619f4c)
-        6.  [projectile configuration](#org774008a)
-        7.  [non-conflicting with installed emacs packages](#org2bc0f65)
-        8.  [TODO](#org306da33)
-    2.  [CMake Build Management](#org786bb96)
-        1.  [TODO](#orgd2f0cbe)
+1.  [Project - Overview: DSA-CLRS](#orga0720bc)
+    1.  [Following CLRS book and sharing the experience on discord](#org95fcf05)
+    2.  [The Various Data Structures and Algorithms will be together on this one project](#org8ba9045)
+    3.  [Project - Current Status](#orgb812d23)
+        1.  [Example Run:](#org7a9fb6a)
+    4.  [Project - Specifics](#org1f287df)
+        1.  [tree](#org691a7b1)
+        2.  [how to build, compile, and run](#org5b6dd8a)
+2.  [Git Repo: DSA-CLRS](#orgf3ae7a3)
+3.  [C++ Project - Main Features](#org508aabf)
+    1.  [Emacs Development Environment](#org5052e9e)
+        1.  [Magit](#org43d82db)
+        2.  [lsp-mode](#org4b0e3ef)
+        3.  [DAP-mode debugging](#org149e6f5)
+        4.  [org-mode](#orgc305dd1)
+        5.  [dir-locals configuration](#org22aca76)
+        6.  [projectile configuration](#org0429b9c)
+        7.  [non-conflicting with installed emacs packages](#org0428abc)
+        8.  [TODO](#org58ee69d)
+    2.  [CMake Build Management](#org0a5e86d)
+        1.  [TODO](#org283b9b7)
+4.  [Algorithms](#org16d1dc5)
+    1.  [Insertion Sort](#orgf559ec5)
 
 
-<a id="org3fb4f6e"></a>
+<a id="orga0720bc"></a>
 
 # Project - Overview: DSA-CLRS
 
 
-<a id="orga32565e"></a>
+<a id="org95fcf05"></a>
 
 ## Following CLRS book and sharing the experience on discord
 
 
-<a id="org998c072"></a>
+<a id="org8ba9045"></a>
 
 ## The Various Data Structures and Algorithms will be together on this one project
 
 
-<a id="orgff57413"></a>
+<a id="orgb812d23"></a>
 
 ## Project - Current Status
 
-Ground-work laid for creation and usage of algorithms, chosen at run-time.
+Ground-work laid for creation and usage of algorithms, chosen at run-time.  
 
 
-<a id="org80affa4"></a>
+<a id="org7a9fb6a"></a>
 
 ### Example Run:
 
@@ -59,21 +61,14 @@ Ground-work laid for creation and usage of algorithms, chosen at run-time.
     algo: myAdd, params: 4,20 --> 24
 
 
-<a id="orgd4dad8b"></a>
+<a id="org1f287df"></a>
 
 ## Project - Specifics
 
 
-<a id="org4304279"></a>
+<a id="org691a7b1"></a>
 
 ### tree
-
-    ;; https://www.baeldung.com/linux/insert-line-specific-line-number
-    ;; report of the directory structure, showing the build directory, but not it's contents
-    (shell-command "tree -a -o tree.txt -I 'build|.cache|.git|tree.txt|ltximg'")
-    (shell-command "sed -i '2 i ├── build' tree.txt")
-    (shell-command "echo 'Plus the build/ directory' >> tree.txt")
-    (shell-command-to-string "cat -b tree.txt") 
 
      1	.
      2	├── build
@@ -105,57 +100,57 @@ Ground-work laid for creation and usage of algorithms, chosen at run-time.
     27	Plus the build/ directory
 
 
-<a id="org9711727"></a>
+<a id="org5b6dd8a"></a>
 
 ### how to build, compile, and run
 
-This build system is integrated with spacemacs.
+This build system is integrated with spacemacs.  
 
 1.  build/compile:
 
-    run (cmake-ide-compile) while in DSA-CLRS.cpp
-    I have (cmake-ide-compile) bound to `,cc`
+    run (cmake-ide-compile) while in DSA-CLRS.cpp  
+    I have (cmake-ide-compile) bound to `,cc`  
 
 2.  run:
 
-    run (omen-c/cpp-project-run-interactive-executable) while in DSA-CLRS.cpp
-    I have (omen-c/cpp-project-run-interactive-executable) bound to `<Spc> ocr`
+    run (omen-c/cpp-project-run-interactive-executable) while in DSA-CLRS.cpp  
+    I have (omen-c/cpp-project-run-interactive-executable) bound to `<Spc> ocr`  
 
 
-<a id="org93a06f6"></a>
+<a id="orgf3ae7a3"></a>
 
 # Git Repo: DSA-CLRS
 
-<https://github.com/kennethken73/DSA_CLRS>
-Remember to export to markdown from README.org
+<https://github.com/kennethken73/DSA_CLRS>  
+Remember to export to markdown from README.org  
 
 
-<a id="org9c0d4f5"></a>
+<a id="org508aabf"></a>
 
 # C++ Project - Main Features
 
 
-<a id="org0f45898"></a>
+<a id="org5052e9e"></a>
 
 ## Emacs Development Environment
 
 
-<a id="org07471ae"></a>
+<a id="org43d82db"></a>
 
 ### Magit
 
 
-<a id="org29b2cb6"></a>
+<a id="org4b0e3ef"></a>
 
 ### lsp-mode
 
 
-<a id="org11f2de9"></a>
+<a id="org149e6f5"></a>
 
 ### DAP-mode debugging
 
 
-<a id="org53e903f"></a>
+<a id="orgc305dd1"></a>
 
 ### org-mode
 
@@ -164,22 +159,22 @@ Remember to export to markdown from README.org
 2.  org-export with pandoc and markdown integration
 
 
-<a id="org4619f4c"></a>
+<a id="org22aca76"></a>
 
 ### dir-locals configuration
 
 
-<a id="org774008a"></a>
+<a id="org0429b9c"></a>
 
 ### projectile configuration
 
 
-<a id="org2bc0f65"></a>
+<a id="org0428abc"></a>
 
 ### non-conflicting with installed emacs packages
 
 
-<a id="org306da33"></a>
+<a id="org58ee69d"></a>
 
 ### TODO
 
@@ -187,17 +182,96 @@ Remember to export to markdown from README.org
 -   get clang-format set up
 
 
-<a id="org786bb96"></a>
+<a id="org0a5e86d"></a>
 
 ## CMake Build Management
 
 
-<a id="orgd2f0cbe"></a>
+<a id="org283b9b7"></a>
 
 ### TODO
 
 -   get clean-target working
--   set up running an input file into the main executable
+-   set up running an input file into the main executable  
     -   this will be our testing method
     -   so, we'll need a cmake target which reads from /test
+
+
+<a id="org16d1dc5"></a>
+
+# Algorithms
+
+<div class="LaTeX" id="org2bd9d42">
+\begin{abstract}
+  \hrule
+    Ongoing Study of CLRS
+  \vspace{6pt}
+  \hrule
+    Literate Programming via orgmode's live-code snippets
+  \vspace{6pt}
+  \hrule
+  \vspace{14pt}
+\end{abstract}
+
+</div>
+
+
+<a id="orgf559ec5"></a>
+
+## Insertion Sort
+
+CLRS pp.18 describes Insertion Sort, with the following pseudo-code:  
+
+    1   for j = 2 to A.length
+    2     key = A[j]
+    3     // Insert A[j] into the
+    4     // sorted sequence A[1..j-1],
+    5     i = j-1
+    6     while i > 0 and A[i] > key
+    7       A[i+1] = A[i]
+    8       i = i-1
+    9     A[i+1] = key
+
+NOTES ON THE PRECEDING PSEUDO-CODE :  
+
+1.  1   for j = 2 to A.length
+    
+    -   Initially, the first item in the array comprises the sorted set, which at this point  
+        is only of length = 1, and therefore is sorted, by force.
+    -   The other items (the last item, the second item, and all items in between) are considered unsorted.
+    -   It is useful to state again, clearly, that this pseudo-code is 1-indexed (not 0-indexed).
+
+2.  2     key = A[j]
+        3     // Insert A[j] into the
+        4     // sorted sequence A[1..j-1],
+    
+    -   On the first iteration, the second item is being placed into the sorted "hand"  
+        (like a "hand" of a deck of cards).
+    -   This item-being-sorted (namely: `j`) is  
+        -   initially: `2`, and
+        -   finally: `A.length`
+        -   So, if (in this 1-indexed array) the array has 5 elements, then  
+            the last element is at position 5.  
+            -   Note, that in 0-indexed arrays, this last element will be at `A.length - 1`!
+        
+        -   The sorted "Left-hand" set is comprised of elements A[1..j-1], which is:  
+            -   initially: A[1..(2-1)] = A[1..1] = A[1], and
+            
+            -   finally: A[1..(A.length-1)]  
+                -   Note, that the final state of the algorithm takes the last item (namely: A[j]),  
+                    and places it into the "left-hand" sorted-set, comprised now of elements A[1] through A[j-1].
+
+3.  5     i = j-1
+        6     while i > 0 and A[i] > key
+        7       A[i+1] = A[i]
+        8       i = i-1
+        9     A[i+1] = key
+    
+    -   We set the index into the sorted "left-hand" sorted-set at the right-most element, and  
+        then iterate backwards.
+    -   On each backwards iteration (i&#x2013;), elements greater than the key-value (A[j]) are moved rightward  
+        in the sorted-set (This is what line 7 accomplishes).
+    -   Line 9 then places the key item-being-placed-into-its-correct-position at this correct position  
+        (namely: A[i+1]).
+    -   Note that line 5 guarantees that there *is* some such i+1, as i is, at maximum (j-1) = (A.length - 1).
 

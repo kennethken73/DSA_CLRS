@@ -19,7 +19,7 @@ Ground-work laid for creation and usage of algorithms, chosen at run-time.
 ** Project - Specifics
 *** tree
 
-#+begin_src elisp :exports both
+#+begin_src elisp :exports results
   ;; https://www.baeldung.com/linux/insert-line-specific-line-number
   ;; report of the directory structure, showing the build directory, but not it's contents
   (shell-command "tree -a -o tree.txt -I 'build|.cache|.git|tree.txt|ltximg'")
@@ -96,3 +96,8 @@ Remember to export to markdown from README.org
 + set up running an input file into the main executable
   + this will be our testing method
   + so, we'll need a cmake target which reads from /test
+    
+    
+* Algorithms
+
+#+INCLUDE: "Algorithms.org"
