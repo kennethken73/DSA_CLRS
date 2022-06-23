@@ -1,13 +1,29 @@
 .
 ├── build
+├── Algorithms.org
+├── Algorithms.pdf
+├── Code_Notes.org
 ├── .dir-locals.el
+├── doc
 ├── .gitignore
+├── lib
+│   └── readme.txt
 ├── .projectile
 ├── README.md
+├── .#README.org -> sov@omen.3631:1655934850
 ├── README.org
 ├── src
 │   ├── CMakeLists.txt
-│   └── DSA_CLRS.cpp
+│   ├── DSA_CLRS.cpp
+│   └── include
+│       ├── myAlgo
+│       │   ├── CMakeLists.txt
+│       │   ├── myAdd.cpp
+│       │   ├── myAlgorithms.cpp
+│       │   ├── myAlgorithms.hpp
+│       │   └── myMult.cpp
+│       └── myDS
 └── test
 
-2 directories, 7 files
+7 directories, 17 files
+Plus the build/ directory

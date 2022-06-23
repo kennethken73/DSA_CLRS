@@ -5,16 +5,17 @@
  */
 #include "include/myAlgo/myAlgorithms.hpp"
 #include <iostream>
+
 using std::cout, std::endl;
 
 int main() {
   std::cout << "Welcome to the DSA-runner\n"
-            << "What Data Structure are we setting up?";
+            << "What Data Structure are we setting up?\n";
 
-  int x {myAdd(5, 7)};
-  int y {myMult(5, 7)};
-
+  listAvailableAlgorithms();
   cout << endl;
-  cout << x << endl;
-  cout << y << endl;
+
+  algoPtr chosenFunction = getAlgorithm(1);  // test using function-pointer hard-set to myAdd()
+  cout << "algo: myAdd, params: 4,20 --> " << chosenFunction(4,20) << endl;
+
 }

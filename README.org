@@ -1,32 +1,63 @@
-* Project - Overview: DSA_CLRS
+* Project - Overview: DSA\_CLRS
 ** Following CLRS book and sharing the experience on discord
 ** The Various Data Structures and Algorithms will be together on this one project
+** Project - Current Status
+Ground-work laid for creation and usage of algorithms, chosen at run-time.
+*** Example Run:
+#+begin_src elisp :exports both
+  (shell-command-to-string projectile-project-run-cmd) 
+#+end_src
+
+#+RESULTS:
+: Welcome to the DSA-runner
+: What Data Structure are we setting up?
+: Available Algorithms:
+: myAdd, myMult, 
+: algo: myAdd, params: 4,20 --> 24
+
+
 ** Project - Specifics
 *** tree
+
 #+begin_src elisp :exports both
   ;; https://www.baeldung.com/linux/insert-line-specific-line-number
   ;; report of the directory structure, showing the build directory, but not it's contents
-  (shell-command "tree -a -o tree.txt -I 'build|.cache|.git|tree.txt'")
+  (shell-command "tree -a -o tree.txt -I 'build|.cache|.git|tree.txt|ltximg'")
   (shell-command "sed -i '2 i ├── build' tree.txt")
-  (shell-command-to-string "cat tree.txt") 
+  (shell-command "echo 'Plus the build/ directory' >> tree.txt")
+  (shell-command-to-string "cat -b tree.txt") 
 #+end_src
 
 #+RESULTS:
 #+begin_example
-.
-├── build
-├── .dir-locals.el
-├── .gitignore
-├── .projectile
-├── README.md
-├── .#README.org -> sov@omen.13683:1655776648
-├── README.org
-├── src
-│   ├── CMakeLists.txt
-│   └── DSA_CLRS.cpp
-└── test
+     1	.
+     2	├── build
+     3	├── Algorithms.org
+     4	├── Algorithms.pdf
+     5	├── Code_Notes.org
+     6	├── .dir-locals.el
+     7	├── doc
+     8	├── .gitignore
+     9	├── lib
+    10	│   └── readme.txt
+    11	├── .projectile
+    12	├── README.md
+    13	├── README.org
+    14	├── src
+    15	│   ├── CMakeLists.txt
+    16	│   ├── DSA_CLRS.cpp
+    17	│   └── include
+    18	│       ├── myAlgo
+    19	│       │   ├── CMakeLists.txt
+    20	│       │   ├── myAdd.cpp
+    21	│       │   ├── myAlgorithms.cpp
+    22	│       │   ├── myAlgorithms.hpp
+    23	│       │   └── myMult.cpp
+    24	│       └── myDS
+    25	└── test
 
-2 directories, 8 files
+    26	7 directories, 16 files
+    27	Plus the build/ directory
 #+end_example
 
 
@@ -35,20 +66,33 @@
 *** how to build, compile, and run
 This build system is integrated with spacemacs.
 **** build/compile:
-run (cmake-ide-compile) while in DSA_CLRS.cpp
+run (cmake-ide-compile) while in DSA\_CLRS.cpp
 I have (cmake-ide-compile) bound to =,cc=
 **** run:
-run (omen-c/cpp-project-run-interactive-executable) while in DSA_CLRS.cpp
+run (omen-c/cpp-project-run-interactive-executable) while in DSA\_CLRS.cpp
 I have (omen-c/cpp-project-run-interactive-executable) bound to =<Spc> ocr=
 
 
-* Git Repo: DSA_CLRS
+* Git Repo: DSA\_CLRS
 https://github.com/kennethken73/DSA_CLRS
 Remember to export to markdown from README.org
 * C++ Project - Main Features
 ** Emacs Development Environment
 *** Magit
+*** lsp-mode
+*** DAP-mode debugging
+*** org-mode
+**** literate programming
+**** org-export with pandoc and markdown integration
 *** dir-locals configuration
 *** projectile configuration
-*** non-conflicting with other emacs packages
+*** non-conflicting with installed emacs packages
+*** TODO
++ get Doxygen set up
++ get clang-format set up
 ** CMake Build Management
+*** TODO
++ get clean-target working
++ set up running an input file into the main executable
+  + this will be our testing method
+  + so, we'll need a cmake target which reads from /test

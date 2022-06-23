@@ -8,10 +8,18 @@
 #ifndef MYALGORITHMS_HPP
 #define MYALGORITHMS_HPP
 
+// #include <array>
+// #include <string>
+
+// const int numberOfAlgorithms{2};
+// std::array<std::string, numberOfAlgorithms> algoName;
+
 int myAdd(int, int);
 int myMult(int, int);
 
-
+void listAvailableAlgorithms();
+typedef int (*algoPtr)(int, int);
+algoPtr getAlgorithm(unsigned int);
 
 
 #endif
