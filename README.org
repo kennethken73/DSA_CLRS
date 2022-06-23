@@ -15,6 +15,10 @@ Ground-work laid for creation and usage of algorithms, chosen at run-time.
 : myAdd, myMult, 
 : algo: myAdd, params: 4,20 --> 24
 
+*** Click on Algorithms(.org||.pdf) to view the work there.
+
+*** Data Structures
+The same format will follow in the near future.
 
 ** Project - Specifics
 *** tree
@@ -98,6 +102,3 @@ Remember to export to markdown from README.org
   + so, we'll need a cmake target which reads from /test
     
     
-* Algorithms
-
-#+INCLUDE: "Algorithms.org"
