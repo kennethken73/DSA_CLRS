@@ -3,17 +3,33 @@
 ** The Various Data Structures and Algorithms will be together on this one project
 ** Project - Current Status
 Ground-work laid for creation and usage of algorithms, chosen at run-time.
+
+Quickly following learncpp.com for the c++ refresher.
+
+IntArray created as first Data Structure.
+
+Now ready to implement the first Algorithm from CLRS: Insertion Sort.
+
 *** Example Run:
 #+begin_src elisp :exports both
   (shell-command-to-string projectile-project-run-cmd) 
 #+end_src
 
 #+RESULTS:
-: Welcome to the DSA-runner
-: What Data Structure are we setting up?
-: Available Algorithms:
-: myAdd, myMult, 
-: algo: myAdd, params: 4,20 --> 24
+#+begin_example
+Welcome to the DSA-runner
+What Data Structure are we setting up?
+Available Algorithms:
+myAdd, myMult, 
+arr[0] == 9
+full array: 
+arr[i]:  9
+arr[i]:  8
+arr[i]:  7
+arr[i]:  6
+
+and done..
+#+end_example
 
 *** Click on Algorithms(.org||.pdf) to view the work there.
 
@@ -41,27 +57,37 @@ The same format will follow in the near future.
      5	├── Code_Notes.org
      6	├── .dir-locals.el
      7	├── doc
-     8	├── .gitignore
-     9	├── lib
-    10	│   └── readme.txt
-    11	├── .projectile
-    12	├── README.md
-    13	├── README.org
-    14	├── src
-    15	│   ├── CMakeLists.txt
-    16	│   ├── DSA_CLRS.cpp
-    17	│   └── include
-    18	│       ├── myAlgo
-    19	│       │   ├── CMakeLists.txt
-    20	│       │   ├── myAdd.cpp
-    21	│       │   ├── myAlgorithms.cpp
-    22	│       │   ├── myAlgorithms.hpp
-    23	│       │   └── myMult.cpp
-    24	│       └── myDS
-    25	└── test
+     8	│   └── code_scraps.org
+     9	├── .gitignore
+    10	├── lib
+    11	│   ├── myTimer.cpp
+    12	│   ├── readme.txt
+    13	│   └── skipHeaders
+    14	├── .projectile
+    15	├── README.md
+    16	├── README.org
+    17	├── src
+    18	│   ├── CMakeLists.txt
+    19	│   ├── DSA_CLRS.cpp
+    20	│   └── include
+    21	│       ├── myAlgo
+    22	│       │   ├── CMakeLists.txt
+    23	│       │   ├── myAdd.cpp
+    24	│       │   ├── myAlgorithms.cpp
+    25	│       │   ├── myAlgorithms.hpp
+    26	│       │   ├── myInsertionSort.cpp
+    27	│       │   └── myMult.cpp
+    28	│       └── myDS
+    29	│           ├── CMakeLists.txt
+    30	│           ├── IntArray.cpp
+    31	│           ├── myDataStructures.cpp
+    32	│           └── myDataStructures.hpp
+    33	└── test
+    34	    ├── commandsGDB
+    35	    └── gdbInput1.txt
 
-    26	7 directories, 16 files
-    27	Plus the build/ directory
+    36	7 directories, 26 files
+    37	Plus the build/ directory
 #+end_example
 
 

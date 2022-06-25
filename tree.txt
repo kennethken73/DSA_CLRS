@@ -5,9 +5,12 @@
 ├── Code_Notes.org
 ├── .dir-locals.el
 ├── doc
+│   └── code_scraps.org
 ├── .gitignore
 ├── lib
-│   └── readme.txt
+│   ├── myTimer.cpp
+│   ├── readme.txt
+│   └── skipHeaders
 ├── .projectile
 ├── README.md
 ├── README.org
@@ -20,9 +23,16 @@
 │       │   ├── myAdd.cpp
 │       │   ├── myAlgorithms.cpp
 │       │   ├── myAlgorithms.hpp
+│       │   ├── myInsertionSort.cpp
 │       │   └── myMult.cpp
 │       └── myDS
+│           ├── CMakeLists.txt
+│           ├── IntArray.cpp
+│           ├── myDataStructures.cpp
+│           └── myDataStructures.hpp
 └── test
+    ├── commandsGDB
+    └── gdbInput1.txt
 
-7 directories, 16 files
+7 directories, 26 files
 Plus the build/ directory
