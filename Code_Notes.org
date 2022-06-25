@@ -62,3 +62,15 @@ https://github.com/oneapi-src/oneTBB
 * Examples of C++ projects
 https://www.codewithc.com/c-projects-with-source-code/
 
+* Debugging
+** dap-debug
+dap-debug hangs at times
+dap-ui-repl needs =-exec= prefix to any gdb commands..
+** gdb
+=M-x gdb= sets up gdb many-windows as an alternative
+gives a proper gdb window
+** LLDB
+optionally, I can try to use LLDB instead of GDB for dap-debug
+https://www.hiroakit.com/archives/1966
+https://emacs-lsp.github.io/dap-mode/page/configuration/#lldb
+

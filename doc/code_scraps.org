@@ -1,0 +1,16 @@
+#+begin_src cpp
+
+  void listAvailableAlgorithms();
+  typedef int (*algoPtr)(int, int);
+  using algoPtr = int(*)(int,int);
+  algoPtr getAlgorithm(unsigned int);
+
+  using IntVector = std::vector<int>;
+  typedef std::vector<int> IntVector;
+  typedef std::vector<int>::iterator Itr; // insert() invalidates the iterator
+
+  IntVector makeIntVector(unsigned int initSize);
+  IntVector interactivePopulate(IntVector&);
+  void printVector(IntVector);
+
+#+end_src

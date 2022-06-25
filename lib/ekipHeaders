@@ -1,0 +1,283 @@
+# -*- mode: gdb-script; -*-
+
+# For use in gdb to avoid stepping into library code
+
+# skip -gfi /usr/include/c++/10/bits/*.h (seems not to work)
+
+# And, even this doesn't work with emacs gdb..
+
+printf "Skipping std headers\n"
+
+skip -fi /usr/include/c++/10/bits/algorithmfwd.h
+skip -fi /usr/include/c++/10/bits/allocated_ptr.h
+skip -fi /usr/include/c++/10/bits/allocator.h
+skip -fi /usr/include/c++/10/bits/alloc_traits.h
+skip -fi /usr/include/c++/10/bits/atomic_base.h
+skip -fi /usr/include/c++/10/bits/atomic_futex.h
+skip -fi /usr/include/c++/10/bits/atomic_lockfree_defines.h
+skip -fi /usr/include/c++/10/bits/basic_ios.h
+skip -fi /usr/include/c++/10/bits/basic_ios.tcc
+skip -fi /usr/include/c++/10/bits/basic_string.h
+skip -fi /usr/include/c++/10/bits/basic_string.tcc
+skip -fi /usr/include/c++/10/bits/boost_concept_check.h
+skip -fi /usr/include/c++/10/bits/c++0x_warning.h
+skip -fi /usr/include/c++/10/bits/charconv.h
+skip -fi /usr/include/c++/10/bits/char_traits.h
+skip -fi /usr/include/c++/10/bits/codecvt.h
+skip -fi /usr/include/c++/10/bits/concept_check.h
+skip -fi /usr/include/c++/10/bits/cpp_type_traits.h
+skip -fi /usr/include/c++/10/bits/cxxabi_forced.h
+skip -fi /usr/include/c++/10/bits/cxxabi_init_exception.h
+skip -fi /usr/include/c++/10/bits/deque.tcc
+skip -fi /usr/include/c++/10/bits/enable_special_members.h
+skip -fi /usr/include/c++/10/bits/erase_if.h
+skip -fi /usr/include/c++/10/bits/exception_defines.h
+skip -fi /usr/include/c++/10/bits/exception.h
+skip -fi /usr/include/c++/10/bits/exception_ptr.h
+skip -fi /usr/include/c++/10/bits/forward_list.h
+skip -fi /usr/include/c++/10/bits/forward_list.tcc
+skip -fi /usr/include/c++/10/bits/fs_dir.h
+skip -fi /usr/include/c++/10/bits/fs_fwd.h
+skip -fi /usr/include/c++/10/bits/fs_ops.h
+skip -fi /usr/include/c++/10/bits/fs_path.h
+skip -fi /usr/include/c++/10/bits/fstream.tcc
+skip -fi /usr/include/c++/10/bits/functexcept.h
+skip -fi /usr/include/c++/10/bits/functional_hash.h
+skip -fi /usr/include/c++/10/bits/gslice_array.h
+skip -fi /usr/include/c++/10/bits/gslice.h
+skip -fi /usr/include/c++/10/bits/hash_bytes.h
+skip -fi /usr/include/c++/10/bits/hashtable.h
+skip -fi /usr/include/c++/10/bits/hashtable_policy.h
+skip -fi /usr/include/c++/10/bits/indirect_array.h
+skip -fi /usr/include/c++/10/bits/invoke.h
+skip -fi /usr/include/c++/10/bits/ios_base.h
+skip -fi /usr/include/c++/10/bits/istream.tcc
+skip -fi /usr/include/c++/10/bits/iterator_concepts.h
+skip -fi /usr/include/c++/10/bits/list.tcc
+skip -fi /usr/include/c++/10/bits/locale_classes.h
+skip -fi /usr/include/c++/10/bits/locale_classes.tcc
+skip -fi /usr/include/c++/10/bits/locale_conv.h
+skip -fi /usr/include/c++/10/bits/locale_facets.h
+skip -fi /usr/include/c++/10/bits/locale_facets_nonio.h
+skip -fi /usr/include/c++/10/bits/locale_facets_nonio.tcc
+skip -fi /usr/include/c++/10/bits/locale_facets.tcc
+skip -fi /usr/include/c++/10/bits/localefwd.h
+skip -fi /usr/include/c++/10/bits/mask_array.h
+skip -fi /usr/include/c++/10/bits/memoryfwd.h
+skip -fi /usr/include/c++/10/bits/move.h
+skip -fi /usr/include/c++/10/bits/nested_exception.h
+skip -fi /usr/include/c++/10/bits/node_handle.h
+skip -fi /usr/include/c++/10/bits/ostream_insert.h
+skip -fi /usr/include/c++/10/bits/ostream.tcc
+skip -fi /usr/include/c++/10/bits/parse_numbers.h
+skip -fi /usr/include/c++/10/bits/postypes.h
+skip -fi /usr/include/c++/10/bits/predefined_ops.h
+skip -fi /usr/include/c++/10/bits/ptr_traits.h
+skip -fi /usr/include/c++/10/bits/quoted_string.h
+skip -fi /usr/include/c++/10/bits/random.h
+skip -fi /usr/include/c++/10/bits/random.tcc
+skip -fi /usr/include/c++/10/bits/range_access.h
+skip -fi /usr/include/c++/10/bits/range_cmp.h
+skip -fi /usr/include/c++/10/bits/ranges_algobase.h
+skip -fi /usr/include/c++/10/bits/ranges_algo.h
+skip -fi /usr/include/c++/10/bits/ranges_uninitialized.h
+skip -fi /usr/include/c++/10/bits/refwrap.h
+skip -fi /usr/include/c++/10/bits/regex_automaton.h
+skip -fi /usr/include/c++/10/bits/regex_automaton.tcc
+skip -fi /usr/include/c++/10/bits/regex_compiler.h
+skip -fi /usr/include/c++/10/bits/regex_compiler.tcc
+skip -fi /usr/include/c++/10/bits/regex_constants.h
+skip -fi /usr/include/c++/10/bits/regex_error.h
+skip -fi /usr/include/c++/10/bits/regex_executor.h
+skip -fi /usr/include/c++/10/bits/regex_executor.tcc
+skip -fi /usr/include/c++/10/bits/regex.h
+skip -fi /usr/include/c++/10/bits/regex_scanner.h
+skip -fi /usr/include/c++/10/bits/regex_scanner.tcc
+skip -fi /usr/include/c++/10/bits/regex.tcc
+skip -fi /usr/include/c++/10/bits/shared_ptr_atomic.h
+skip -fi /usr/include/c++/10/bits/shared_ptr_base.h
+skip -fi /usr/include/c++/10/bits/shared_ptr.h
+skip -fi /usr/include/c++/10/bits/slice_array.h
+skip -fi /usr/include/c++/10/bits/specfun.h
+skip -fi /usr/include/c++/10/bits/sstream.tcc
+skip -fi /usr/include/c++/10/bits/std_abs.h
+skip -fi /usr/include/c++/10/bits/std_function.h
+skip -fi /usr/include/c++/10/bits/std_mutex.h
+skip -fi /usr/include/c++/10/bits/stl_algobase.h
+skip -fi /usr/include/c++/10/bits/stl_algo.h
+skip -fi /usr/include/c++/10/bits/stl_bvector.h
+skip -fi /usr/include/c++/10/bits/stl_construct.h
+skip -fi /usr/include/c++/10/bits/stl_deque.h
+skip -fi /usr/include/c++/10/bits/stl_function.h
+skip -fi /usr/include/c++/10/bits/stl_heap.h
+skip -fi /usr/include/c++/10/bits/stl_iterator_base_funcs.h
+skip -fi /usr/include/c++/10/bits/stl_iterator_base_types.h
+skip -fi /usr/include/c++/10/bits/stl_iterator.h
+skip -fi /usr/include/c++/10/bits/stl_list.h
+skip -fi /usr/include/c++/10/bits/stl_map.h
+skip -fi /usr/include/c++/10/bits/stl_multimap.h
+skip -fi /usr/include/c++/10/bits/stl_multiset.h
+skip -fi /usr/include/c++/10/bits/stl_numeric.h
+skip -fi /usr/include/c++/10/bits/stl_pair.h
+skip -fi /usr/include/c++/10/bits/stl_queue.h
+skip -fi /usr/include/c++/10/bits/stl_raw_storage_iter.h
+skip -fi /usr/include/c++/10/bits/stl_relops.h
+skip -fi /usr/include/c++/10/bits/stl_set.h
+skip -fi /usr/include/c++/10/bits/stl_stack.h
+skip -fi /usr/include/c++/10/bits/stl_tempbuf.h
+skip -fi /usr/include/c++/10/bits/stl_tree.h
+skip -fi /usr/include/c++/10/bits/stl_uninitialized.h
+skip -fi /usr/include/c++/10/bits/stl_vector.h
+skip -fi /usr/include/c++/10/bits/streambuf_iterator.h
+skip -fi /usr/include/c++/10/bits/streambuf.tcc
+skip -fi /usr/include/c++/10/bits/stream_iterator.h
+skip -fi /usr/include/c++/10/bits/stringfwd.h
+skip -fi /usr/include/c++/10/bits/string_view.tcc
+skip -fi /usr/include/c++/10/bits/uniform_int_dist.h
+skip -fi /usr/include/c++/10/bits/unique_lock.h
+skip -fi /usr/include/c++/10/bits/unique_ptr.h
+skip -fi /usr/include/c++/10/bits/unordered_map.h
+skip -fi /usr/include/c++/10/bits/unordered_set.h
+skip -fi /usr/include/c++/10/bits/uses_allocator.h
+skip -fi /usr/include/c++/10/bits/valarray_after.h
+skip -fi /usr/include/c++/10/bits/valarray_array.h
+skip -fi /usr/include/c++/10/bits/valarray_array.tcc
+skip -fi /usr/include/c++/10/bits/valarray_before.h
+skip -fi /usr/include/c++/10/bits/vector.tcc
+
+skip -fi /usr/include/c++/10/bits/algorithmfwd.c
+skip -fi /usr/include/c++/10/bits/allocated_ptr.c
+skip -fi /usr/include/c++/10/bits/allocator.c
+skip -fi /usr/include/c++/10/bits/alloc_traits.c
+skip -fi /usr/include/c++/10/bits/atomic_base.c
+skip -fi /usr/include/c++/10/bits/atomic_futex.c
+skip -fi /usr/include/c++/10/bits/atomic_lockfree_defines.c
+skip -fi /usr/include/c++/10/bits/basic_ios.c
+# skip -fi /usr/include/c++/10/bits/basic_ios.tcc
+skip -fi /usr/include/c++/10/bits/basic_string.c
+# skip -fi /usr/include/c++/10/bits/basic_string.tcc
+skip -fi /usr/include/c++/10/bits/boost_concept_check.c
+skip -fi /usr/include/c++/10/bits/c++0x_warning.c
+skip -fi /usr/include/c++/10/bits/charconv.c
+skip -fi /usr/include/c++/10/bits/char_traits.c
+skip -fi /usr/include/c++/10/bits/codecvt.c
+skip -fi /usr/include/c++/10/bits/concept_check.c
+skip -fi /usr/include/c++/10/bits/cpp_type_traits.c
+skip -fi /usr/include/c++/10/bits/cxxabi_forced.c
+skip -fi /usr/include/c++/10/bits/cxxabi_init_exception.c
+# skip -fi /usr/include/c++/10/bits/deque.tcc
+skip -fi /usr/include/c++/10/bits/enable_special_members.c
+skip -fi /usr/include/c++/10/bits/erase_if.c
+skip -fi /usr/include/c++/10/bits/exception_defines.c
+skip -fi /usr/include/c++/10/bits/exception.c
+skip -fi /usr/include/c++/10/bits/exception_ptr.c
+skip -fi /usr/include/c++/10/bits/forward_list.c
+# skip -fi /usr/include/c++/10/bits/forward_list.tcc
+skip -fi /usr/include/c++/10/bits/fs_dir.c
+skip -fi /usr/include/c++/10/bits/fs_fwd.c
+skip -fi /usr/include/c++/10/bits/fs_ops.c
+skip -fi /usr/include/c++/10/bits/fs_path.c
+# skip -fi /usr/include/c++/10/bits/fstream.tcc
+skip -fi /usr/include/c++/10/bits/functexcept.c
+skip -fi /usr/include/c++/10/bits/functional_hash.c
+skip -fi /usr/include/c++/10/bits/gslice_array.c
+skip -fi /usr/include/c++/10/bits/gslice.c
+skip -fi /usr/include/c++/10/bits/hash_bytes.c
+skip -fi /usr/include/c++/10/bits/hashtable.c
+skip -fi /usr/include/c++/10/bits/hashtable_policy.c
+skip -fi /usr/include/c++/10/bits/indirect_array.c
+skip -fi /usr/include/c++/10/bits/invoke.c
+skip -fi /usr/include/c++/10/bits/ios_base.c
+# skip -fi /usr/include/c++/10/bits/istream.tcc
+skip -fi /usr/include/c++/10/bits/iterator_concepts.c
+# skip -fi /usr/include/c++/10/bits/list.tcc
+skip -fi /usr/include/c++/10/bits/locale_classes.c
+# skip -fi /usr/include/c++/10/bits/locale_classes.tcc
+skip -fi /usr/include/c++/10/bits/locale_conv.c
+skip -fi /usr/include/c++/10/bits/locale_facets.c
+skip -fi /usr/include/c++/10/bits/locale_facets_nonio.c
+# skip -fi /usr/include/c++/10/bits/locale_facets_nonio.tcc
+# skip -fi /usr/include/c++/10/bits/locale_facets.tcc
+skip -fi /usr/include/c++/10/bits/localefwd.c
+skip -fi /usr/include/c++/10/bits/mask_array.c
+skip -fi /usr/include/c++/10/bits/memoryfwd.c
+skip -fi /usr/include/c++/10/bits/move.c
+skip -fi /usr/include/c++/10/bits/nested_exception.c
+skip -fi /usr/include/c++/10/bits/node_handle.c
+skip -fi /usr/include/c++/10/bits/ostream_insert.c
+# skip -fi /usr/include/c++/10/bits/ostream.tcc
+skip -fi /usr/include/c++/10/bits/parse_numbers.c
+skip -fi /usr/include/c++/10/bits/postypes.c
+skip -fi /usr/include/c++/10/bits/predefined_ops.c
+skip -fi /usr/include/c++/10/bits/ptr_traits.c
+skip -fi /usr/include/c++/10/bits/quoted_string.c
+skip -fi /usr/include/c++/10/bits/random.c
+# skip -fi /usr/include/c++/10/bits/random.tcc
+skip -fi /usr/include/c++/10/bits/range_access.c
+skip -fi /usr/include/c++/10/bits/range_cmp.c
+skip -fi /usr/include/c++/10/bits/ranges_algobase.c
+skip -fi /usr/include/c++/10/bits/ranges_algo.c
+skip -fi /usr/include/c++/10/bits/ranges_uninitialized.c
+skip -fi /usr/include/c++/10/bits/refwrap.c
+skip -fi /usr/include/c++/10/bits/regex_automaton.c
+# skip -fi /usr/include/c++/10/bits/regex_automaton.tcc
+skip -fi /usr/include/c++/10/bits/regex_compiler.c
+# skip -fi /usr/include/c++/10/bits/regex_compiler.tcc
+skip -fi /usr/include/c++/10/bits/regex_constants.c
+skip -fi /usr/include/c++/10/bits/regex_error.c
+skip -fi /usr/include/c++/10/bits/regex_executor.c
+# skip -fi /usr/include/c++/10/bits/regex_executor.tcc
+skip -fi /usr/include/c++/10/bits/regex.c
+skip -fi /usr/include/c++/10/bits/regex_scanner.c
+# skip -fi /usr/include/c++/10/bits/regex_scanner.tcc
+# skip -fi /usr/include/c++/10/bits/regex.tcc
+skip -fi /usr/include/c++/10/bits/shared_ptr_atomic.c
+skip -fi /usr/include/c++/10/bits/shared_ptr_base.c
+skip -fi /usr/include/c++/10/bits/shared_ptr.c
+skip -fi /usr/include/c++/10/bits/slice_array.c
+skip -fi /usr/include/c++/10/bits/specfun.c
+# skip -fi /usr/include/c++/10/bits/sstream.tcc
+skip -fi /usr/include/c++/10/bits/std_abs.c
+skip -fi /usr/include/c++/10/bits/std_function.c
+skip -fi /usr/include/c++/10/bits/std_mutex.c
+skip -fi /usr/include/c++/10/bits/stl_algobase.c
+skip -fi /usr/include/c++/10/bits/stl_algo.c
+skip -fi /usr/include/c++/10/bits/stl_bvector.c
+skip -fi /usr/include/c++/10/bits/stl_construct.c
+skip -fi /usr/include/c++/10/bits/stl_deque.c
+skip -fi /usr/include/c++/10/bits/stl_function.c
+skip -fi /usr/include/c++/10/bits/stl_heap.c
+skip -fi /usr/include/c++/10/bits/stl_iterator_base_funcs.c
+skip -fi /usr/include/c++/10/bits/stl_iterator_base_types.c
+skip -fi /usr/include/c++/10/bits/stl_iterator.c
+skip -fi /usr/include/c++/10/bits/stl_list.c
+skip -fi /usr/include/c++/10/bits/stl_map.c
+skip -fi /usr/include/c++/10/bits/stl_multimap.c
+skip -fi /usr/include/c++/10/bits/stl_multiset.c
+skip -fi /usr/include/c++/10/bits/stl_numeric.c
+skip -fi /usr/include/c++/10/bits/stl_pair.c
+skip -fi /usr/include/c++/10/bits/stl_queue.c
+skip -fi /usr/include/c++/10/bits/stl_raw_storage_iter.c
+skip -fi /usr/include/c++/10/bits/stl_relops.c
+skip -fi /usr/include/c++/10/bits/stl_set.c
+skip -fi /usr/include/c++/10/bits/stl_stack.c
+skip -fi /usr/include/c++/10/bits/stl_tempbuf.c
+skip -fi /usr/include/c++/10/bits/stl_tree.c
+skip -fi /usr/include/c++/10/bits/stl_uninitialized.c
+skip -fi /usr/include/c++/10/bits/stl_vector.c
+skip -fi /usr/include/c++/10/bits/streambuf_iterator.c
+# skip -fi /usr/include/c++/10/bits/streambuf.tcc
+skip -fi /usr/include/c++/10/bits/stream_iterator.c
+skip -fi /usr/include/c++/10/bits/stringfwd.c
+# skip -fi /usr/include/c++/10/bits/string_view.tcc
+skip -fi /usr/include/c++/10/bits/uniform_int_dist.c
+skip -fi /usr/include/c++/10/bits/unique_lock.c
+skip -fi /usr/include/c++/10/bits/unique_ptr.c
+skip -fi /usr/include/c++/10/bits/unordered_map.c
+skip -fi /usr/include/c++/10/bits/unordered_set.c
+skip -fi /usr/include/c++/10/bits/uses_allocator.c
+skip -fi /usr/include/c++/10/bits/valarray_after.c
+skip -fi /usr/include/c++/10/bits/valarray_array.c
+# skip -fi /usr/include/c++/10/bits/valarray_array.tcc
+skip -fi /usr/include/c++/10/bits/valarray_before.c
+# skip -fi /usr/include/c++/10/bits/vector.tcc

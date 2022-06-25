@@ -45,7 +45,8 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Werror")
 ## generate maximum debug information
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Og -ggdb")
 
-# NOTE touch CMakeLists.txt to get this file (and the following report) to be re-evaluated on compile
+# NOTE touch CMakeLists.txt to get this file (and the following report)
+#      to be re-evaluated on compile
 message("Reporting Variables..")
 include(CMakePrintHelpers)
 cmake_print_variables(CMAKE_CXX_COMPILER_ID)
@@ -62,17 +63,24 @@ cmake_print_variables(PROJECT_SOURCE_DIR)
 #   PROPERTIES BUILD_RPATH)
 
 # included headers/implementation
+## add_subdirectory tells CMake to add the directories to compilation
+##  ..requiring the directories to have their own CMakeLists
 add_subdirectory("${PROJECT_SOURCE_DIR}/include/myAlgo/")
+add_subdirectory("${PROJECT_SOURCE_DIR}/include/myDS/")
 
 # executable
 add_executable(DSA_CLRS DSA_CLRS.cpp)
 
 # additional linking
+## myAlgoLib and myDSLib are CMake tokens (targets?) defined in
+##   myAlgo/CMakeLists.txt and myDS/CMakeLists.txt
 target_link_libraries(DSA_CLRS PUBLIC myAlgoLib)
+target_link_libraries(DSA_CLRS PUBLIC myDSLib)
 
 target_include_directories(DSA_CLRS PUBLIC
   "${PROJECT_BINARY_DIR}"
-  "${PROJECT_SOURCE_DIR}/include/myAlgo")
+  "${PROJECT_SOURCE_DIR}/include/myAlgo"
+  "${PROJECT_SOURCE_DIR}/include/myDS")
 
 
 

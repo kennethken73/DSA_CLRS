@@ -4,6 +4,7 @@
   populate it, and run an algorithm of the user's choice on it.
  */
 #include "include/myAlgo/myAlgorithms.hpp"
+#include "myDataStructures.hpp"
 #include <iostream>
 
 using std::cout, std::endl;
@@ -15,7 +16,18 @@ int main() {
   listAvailableAlgorithms();
   cout << endl;
 
-  algoPtr chosenFunction = getAlgorithm(1);  // test using function-pointer hard-set to myAdd()
-  cout << "algo: myAdd, params: 4,20 --> " << chosenFunction(4,20) << endl;
+  IntArray a{4};
+  a.at(0) = 9;
+  a.at(1) = 8;
+  a.at(2) = 7;
+  a.setValue(3, 6);
 
+  cout << "arr[0] == " << a.showValue(0) << endl;
+  cout << "full array: " << endl;
+  a.print();
+  cout << endl;
+
+  int halt;
+  cout << "and done.." << endl;
+  std::cin >> halt;
 }

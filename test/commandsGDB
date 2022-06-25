@@ -1,0 +1,13 @@
+# -*- mode: gdb-script; -*-
+
+# this runs from build/
+
+printf "reading commandsGDB\n"
+
+start < ../test/gdbInput1.txt
+
+break DSA_CLRS.cpp:28
+break myDataStructures.cpp:26
+
+watch vec
+display vec
