@@ -9,8 +9,8 @@ class IntArray {
 public:
   void print() const;
   void setValue(int idx, int value);
-  int &showValue(int idx) const;
-  int &at(int idx) const;  // IntArray a{4}; print(a.at(2)); (same as showValue)
+  int showLength() const;
+  int &at(int idx) const;  // IntArray a{4}; print(a.at(2));
   int &at(int idx);        // IntArray a{4}; a.at(2) = 4;
 
   IntArray(int length);

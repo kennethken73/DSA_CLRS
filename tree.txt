@@ -8,6 +8,7 @@
 │   └── code_scraps.org
 ├── .gitignore
 ├── lib
+│   ├── CMakeLists.txt
 │   ├── myTimer.cpp
 │   ├── readme.txt
 │   └── skipHeaders
@@ -34,5 +35,5 @@
     ├── commandsGDB
     └── gdbInput1.txt
 
-7 directories, 26 files
+7 directories, 27 files
 Plus the build/ directory

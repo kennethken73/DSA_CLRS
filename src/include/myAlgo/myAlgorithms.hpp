@@ -8,9 +8,12 @@
 #ifndef MYALGORITHMS_HPP
 #define MYALGORITHMS_HPP
 
+class IntArray;
 
 int myAdd(int, int);
 int myMult(int, int);
 void listAvailableAlgorithms();
+
+IntArray& myInsertionSort(IntArray&);
 
 #endif

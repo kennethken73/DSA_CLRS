@@ -4,10 +4,16 @@
 
 printf "reading commandsGDB\n"
 
-start < ../test/gdbInput1.txt
+# start < ../test/gdbInput1.txt
+start
 
-break DSA_CLRS.cpp:28
-break myDataStructures.cpp:26
+break DSA_CLRS.cpp:36
+break myInsertionSort.cpp:17
 
-watch vec
-display vec
+watch a
+display a.print()
+
+# commands
+#   p a.print()
+# end
+

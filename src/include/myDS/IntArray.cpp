@@ -9,7 +9,7 @@ unsigned int IntArray::globalCountOfIntArrays{0};
 
 void IntArray::print() const{
   for(int i = 0; i < len; ++i) {
-    std::cout << "arr[i]:  "
+    std::cout << "arr[" << i << "]:  "
               << arr[i] << std::endl;
   }
 
@@ -17,7 +17,7 @@ void IntArray::print() const{
 
 void IntArray::setValue(int idx, int value){ arr[idx] = value; }
 
-int &IntArray::showValue(int idx) const { return arr[idx]; }
+int IntArray::showLength() const { return len; }
 
 int &IntArray::at(int idx) const { return arr[idx]; }
 int &IntArray::at(int idx) { return arr[idx]; }
