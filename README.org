@@ -14,9 +14,14 @@ page 18
 *** Current learncpp page:
 https://www.learncpp.com/cpp-tutorial/timing-your-code/
 
+
+org-md-export-to-markdown     M-x ... RET
+   Export current buffer to a Markdown file.
+   
 *** Example Run:
 #+begin_src elisp :exports both
   (shell-command-to-string projectile-project-run-cmd) 
+  (org-md-export-to-markdown) ;; remember to re-export this to markdown
 #+end_src
 
 #+RESULTS:

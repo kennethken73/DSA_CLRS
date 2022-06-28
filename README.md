@@ -1,47 +1,49 @@
 
 # Table of Contents
 
-1.  [Project - Overview: DSA-CLRS](#org6665889)
-    1.  [Following CLRS book and sharing the experience on discord](#orgda10f48)
-    2.  [The Various Data Structures and Algorithms will be together on this one project](#org95d6844)
-    3.  [Project - Current Status](#org7bdc6d9)
-        1.  [Example Run:](#org987f461)
-        2.  [Click on Algorithms(.org||.pdf) to view the work there.](#orgbc06508)
-        3.  [Data Structures](#orge37195c)
-    4.  [Project - Specifics](#orgf01ed4b)
-        1.  [tree](#org6e4e0ec)
-        2.  [how to build, compile, and run](#org90b6c6f)
-2.  [Git Repo: DSA-CLRS](#org14e76c7)
-3.  [C++ Project - Main Features](#orgaa2c40e)
-    1.  [Emacs Development Environment](#orgf388588)
-        1.  [Magit](#orgce36e59)
-        2.  [lsp-mode](#org8f4126f)
-        3.  [DAP-mode debugging](#orgdefd58b)
-        4.  [org-mode](#orgf248960)
-        5.  [dir-locals configuration](#org96b5509)
-        6.  [projectile configuration](#orgc41b85d)
-        7.  [non-conflicting with installed emacs packages](#orgd8438a2)
-        8.  [TODO](#org3a14ca8)
-    2.  [CMake Build Management](#org5867cca)
-        1.  [TODO](#org52f91ea)
+1.  [Project - Overview: DSA-CLRS](#org4775725)
+    1.  [Following CLRS book and sharing the experience on discord](#org3a9a8c0)
+    2.  [The Various Data Structures and Algorithms will be together on this one project](#org6e411c5)
+    3.  [Project - Current Status](#orga7798d0)
+        1.  [Current CLRS page:](#org5274b4b)
+        2.  [Current learncpp page:](#org2ed4f36)
+        3.  [Example Run:](#orgd557f67)
+        4.  [Click on Algorithms(.org||.pdf) to view the work there.](#orge09dddd)
+        5.  [Data Structures](#org7d3e21c)
+    4.  [Project - Specifics](#org6d19f24)
+        1.  [tree](#org8ca7be2)
+        2.  [how to build, compile, and run](#org4cab67e)
+2.  [Git Repo: DSA-CLRS](#org2ace57e)
+3.  [C++ Project - Main Features](#org45abb41)
+    1.  [Emacs Development Environment](#orgf4221c0)
+        1.  [Magit](#org53057cf)
+        2.  [lsp-mode](#org898c7ea)
+        3.  [DAP-mode debugging](#org3019070)
+        4.  [org-mode](#orge577f6d)
+        5.  [dir-locals configuration](#orgf59f2a9)
+        6.  [projectile configuration](#org7d6bc0c)
+        7.  [non-conflicting with installed emacs packages](#org5153f16)
+        8.  [TODO](#org71c3894)
+    2.  [CMake Build Management](#org80207f7)
+        1.  [TODO](#org43ef209)
 
 
-<a id="org6665889"></a>
+<a id="org4775725"></a>
 
 # Project - Overview: DSA-CLRS
 
 
-<a id="orgda10f48"></a>
+<a id="org3a9a8c0"></a>
 
 ## Following CLRS book and sharing the experience on discord
 
 
-<a id="org95d6844"></a>
+<a id="org6e411c5"></a>
 
 ## The Various Data Structures and Algorithms will be together on this one project
 
 
-<a id="org7bdc6d9"></a>
+<a id="orga7798d0"></a>
 
 ## Project - Current Status
 
@@ -51,10 +53,24 @@ Quickly following learncpp.com for the c++ refresher.
 
 IntArray created as first Data Structure.
 
-Now ready to implement the first Algorithm from CLRS: Insertion Sort.
+Implemented the first Algorithm from CLRS: Insertion Sort.
 
 
-<a id="org987f461"></a>
+<a id="org5274b4b"></a>
+
+### Current CLRS page:
+
+page 18
+
+
+<a id="org2ed4f36"></a>
+
+### Current learncpp page:
+
+<https://www.learncpp.com/cpp-tutorial/timing-your-code/>
+
+
+<a id="orgd557f67"></a>
 
 ### Example Run:
 
@@ -64,34 +80,40 @@ Now ready to implement the first Algorithm from CLRS: Insertion Sort.
     What Data Structure are we setting up?
     Available Algorithms:
     myAdd, myMult, 
-    arr[0] == 9
     full array: 
-    arr[i]:  9
-    arr[i]:  8
-    arr[i]:  7
-    arr[i]:  6
+    arr[0]:  4
+    arr[1]:  9
+    arr[2]:  2
+    arr[3]:  6
     
-    and done..
+    sorting the array...
+    sorted array..:
+    arr[0]:  0
+    arr[1]:  2
+    arr[2]:  4
+    arr[3]:  6
+    
+    Time elapsed: 2.3304e-05 seconds
 
 
-<a id="orgbc06508"></a>
+<a id="orge09dddd"></a>
 
 ### Click on Algorithms(.org||.pdf) to view the work there.
 
 
-<a id="orge37195c"></a>
+<a id="org7d3e21c"></a>
 
 ### Data Structures
 
 The same format will follow in the near future.
 
 
-<a id="orgf01ed4b"></a>
+<a id="org6d19f24"></a>
 
 ## Project - Specifics
 
 
-<a id="org6e4e0ec"></a>
+<a id="org8ca7be2"></a>
 
 ### tree
 
@@ -105,37 +127,38 @@ The same format will follow in the near future.
      8	│   └── code_scraps.org
      9	├── .gitignore
     10	├── lib
-    11	│   ├── myTimer.cpp
-    12	│   ├── readme.txt
-    13	│   └── skipHeaders
-    14	├── .projectile
-    15	├── README.md
-    16	├── README.org
-    17	├── src
-    18	│   ├── CMakeLists.txt
-    19	│   ├── DSA_CLRS.cpp
-    20	│   └── include
-    21	│       ├── myAlgo
-    22	│       │   ├── CMakeLists.txt
-    23	│       │   ├── myAdd.cpp
-    24	│       │   ├── myAlgorithms.cpp
-    25	│       │   ├── myAlgorithms.hpp
-    26	│       │   ├── myInsertionSort.cpp
-    27	│       │   └── myMult.cpp
-    28	│       └── myDS
-    29	│           ├── CMakeLists.txt
-    30	│           ├── IntArray.cpp
-    31	│           ├── myDataStructures.cpp
-    32	│           └── myDataStructures.hpp
-    33	└── test
-    34	    ├── commandsGDB
-    35	    └── gdbInput1.txt
+    11	│   ├── CMakeLists.txt
+    12	│   ├── myTimer.cpp
+    13	│   ├── readme.txt
+    14	│   └── skipHeaders
+    15	├── .projectile
+    16	├── README.md
+    17	├── README.org
+    18	├── src
+    19	│   ├── CMakeLists.txt
+    20	│   ├── DSA_CLRS.cpp
+    21	│   └── include
+    22	│       ├── myAlgo
+    23	│       │   ├── CMakeLists.txt
+    24	│       │   ├── myAdd.cpp
+    25	│       │   ├── myAlgorithms.cpp
+    26	│       │   ├── myAlgorithms.hpp
+    27	│       │   ├── myInsertionSort.cpp
+    28	│       │   └── myMult.cpp
+    29	│       └── myDS
+    30	│           ├── CMakeLists.txt
+    31	│           ├── IntArray.cpp
+    32	│           ├── myDataStructures.cpp
+    33	│           └── myDataStructures.hpp
+    34	└── test
+    35	    ├── commandsGDB
+    36	    └── gdbInput1.txt
     
-    36	7 directories, 26 files
-    37	Plus the build/ directory
+    37	7 directories, 27 files
+    38	Plus the build/ directory
 
 
-<a id="org90b6c6f"></a>
+<a id="org4cab67e"></a>
 
 ### how to build, compile, and run
 
@@ -152,7 +175,7 @@ This build system is integrated with spacemacs.
     I have (omen-c/cpp-project-run-interactive-executable) bound to `<Spc> ocr`
 
 
-<a id="org14e76c7"></a>
+<a id="org2ace57e"></a>
 
 # Git Repo: DSA-CLRS
 
@@ -160,32 +183,32 @@ This build system is integrated with spacemacs.
 Remember to export to markdown from README.org
 
 
-<a id="orgaa2c40e"></a>
+<a id="org45abb41"></a>
 
 # C++ Project - Main Features
 
 
-<a id="orgf388588"></a>
+<a id="orgf4221c0"></a>
 
 ## Emacs Development Environment
 
 
-<a id="orgce36e59"></a>
+<a id="org53057cf"></a>
 
 ### Magit
 
 
-<a id="org8f4126f"></a>
+<a id="org898c7ea"></a>
 
 ### lsp-mode
 
 
-<a id="orgdefd58b"></a>
+<a id="org3019070"></a>
 
 ### DAP-mode debugging
 
 
-<a id="orgf248960"></a>
+<a id="orge577f6d"></a>
 
 ### org-mode
 
@@ -194,22 +217,22 @@ Remember to export to markdown from README.org
 2.  org-export with pandoc and markdown integration
 
 
-<a id="org96b5509"></a>
+<a id="orgf59f2a9"></a>
 
 ### dir-locals configuration
 
 
-<a id="orgc41b85d"></a>
+<a id="org7d6bc0c"></a>
 
 ### projectile configuration
 
 
-<a id="orgd8438a2"></a>
+<a id="org5153f16"></a>
 
 ### non-conflicting with installed emacs packages
 
 
-<a id="org3a14ca8"></a>
+<a id="org71c3894"></a>
 
 ### TODO
 
@@ -217,12 +240,12 @@ Remember to export to markdown from README.org
 -   get clang-format set up
 
 
-<a id="org5867cca"></a>
+<a id="org80207f7"></a>
 
 ## CMake Build Management
 
 
-<a id="org52f91ea"></a>
+<a id="org43ef209"></a>
 
 ### TODO
 
