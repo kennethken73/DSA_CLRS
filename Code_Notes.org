@@ -74,3 +74,5 @@ optionally, I can try to use LLDB instead of GDB for dap-debug
 https://www.hiroakit.com/archives/1966
 https://emacs-lsp.github.io/dap-mode/page/configuration/#lldb
 
+
+testing..
