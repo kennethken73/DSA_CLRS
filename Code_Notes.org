@@ -16,7 +16,7 @@ Good example of CMakeLists
 Instead of following a complete CMake(Lists.txt) solution, I am adding to my CMakeLists as I learn.
 https://github.com/Lectem/cpp-boilerplate
 https://github.com/vector-of-bool/pitchfork
-(I prefer "sources HAVE includes (interior: /project-root/src/include/); 
+(I prefer "sources HAVE includes (interior: /project-root/src/include/);
   sources can LOOK for libraries (exterior: /project-root/lib/)).
 
 ** "make clean" in CMake
@@ -44,7 +44,7 @@ But, I'd prefer /lib to store this.. as in /lib/io and /lib/logic to be consumed
 obviously, use inclusion guards..
 https://gamedev.net/tutorials/_/technical/general-programming/organizing-code-files-in-c-and-c-r1798/
 
- 
+
 * std::vector
 https://m.cplusplus.com/reference/vector/vector/
 https://www.geeksforgeeks.org/initialize-a-vector-in-cpp-different-ways/
@@ -75,4 +75,10 @@ https://www.hiroakit.com/archives/1966
 https://emacs-lsp.github.io/dap-mode/page/configuration/#lldb
 
 
-testing..31..
+testing..32..
+
+* TODO shopping list [3/3]
++ [X] milk
++ [X] eggs
++ [X] bread
+
