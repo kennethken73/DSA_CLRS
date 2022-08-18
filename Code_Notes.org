@@ -75,7 +75,7 @@ https://www.hiroakit.com/archives/1966
 https://emacs-lsp.github.io/dap-mode/page/configuration/#lldb
 
 
-testing..32..
+testing..33..
 
 * TODO shopping list [3/3]
 + [X] milk
